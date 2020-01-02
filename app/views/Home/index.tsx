@@ -10,7 +10,11 @@ import styles from './styles';
 import {global} from '@assets/styles';
 import Header from '@components/Header';
 
-export default class Home extends React.Component {
+interface HomeProps {
+  navigation: {};
+}
+
+export default class Home extends React.Component<HomeProps> {
   componentDidMount() {
     PermissionsAndroid.request(
       PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,

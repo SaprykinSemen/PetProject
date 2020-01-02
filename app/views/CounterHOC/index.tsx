@@ -2,7 +2,11 @@ import React from 'react';
 import {View, Button} from 'react-native';
 import Counter from '@components/Counter';
 
-export default class CounterHOC extends React.Component {
+interface StateType {
+  count: number;
+}
+
+export default class CounterHOC extends React.Component<{}, StateType> {
   state = {
     count: 0,
   };

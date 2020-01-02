@@ -3,9 +3,13 @@ import React from 'react';
 import {View, Button} from 'react-native';
 import Component1 from '@components/Counter/Component1';
 
+interface StateType {
+  count: number;
+}
+
 export const MyCounterContext = React.createContext(); // 1. Создаем контекст
 
-export default class CounterContext extends React.Component {
+export default class CounterContext extends React.Component<{}, StateType> {
   state = {
     count: 0,
   };

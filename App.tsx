@@ -13,7 +13,7 @@ let enhancer = composeWithDevTools(applyMiddleware(sagaMiddleware));
 const store = createStore(rootReducer, enhancer);
 sagaMiddleware.run(rootSaga);
 
-const App = () => {
+const App: React.FC = () => {
   useEffect(() => {
     SplashScreen.hide();
   });
